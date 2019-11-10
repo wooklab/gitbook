@@ -1,0 +1,370 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>git 명령어모음 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Git 명령어 모음">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="GitUtils.html" />
+    
+    
+    <link rel="prev" href="../Spring/SpringBootInitialzr.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JAVA</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Spring</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Spring/SpringBootInitialzr.html">
+            
+                <a href="../Spring/SpringBootInitialzr.html">
+            
+                    
+                    SpringBoot 구성하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="GitCommand.html">
+            
+                <a href="GitCommand.html">
+            
+                    
+                    git 명령어모음
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="GitUtils.html">
+            
+                <a href="GitUtils.html">
+            
+                    
+                    git 유틸리티
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Development Env.</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../DevEnv/JavaEnv.html">
+            
+                <a href="../DevEnv/JavaEnv.html">
+            
+                    
+                    Java JDK 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Book</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Book/RecommendBook.html">
+            
+                <a href="../Book/RecommendBook.html">
+            
+                    
+                    책 추천
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >git 명령어모음</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="git-commands">Git Commands</h1>
+<h3 id="git-&#xBA85;&#xB839;&#xC5B4;-&#xBAA8;&#xC74C;">Git &#xBA85;&#xB839;&#xC5B4; &#xBAA8;&#xC74C;</h3>
+<pre><code>git commit
+git commit --amend : &#xCEE4;&#xBC0B; &#xB0B4;&#xC6A9; &#xC815;&#xC815;
+git checkout [branch/tag&#xBA85;] : &#xD574;&#xB2F9; [branch/tag&#xBA85;]&#xC73C;&#xB85C; &#xC774;&#xB3D9;
+git merge &lt;A&gt; :  &#xD604;&#xC7AC; branch&#xB85C; &#xD574;&#xB2F9; &lt;A&gt; &#xBCD1;&#xD569;
+git branch &lt;A&gt; : branch &lt;A&gt;&#xC0DD;&#xC131;
+git branch -f &lt;A&gt; : branch&lt;A&gt;&#xB97C; &#xD604;&#xC7AC; branch&#xB85C; &#xAC15;&#xC81C; &#xC774;&#xB3D9;
+git branch -f &lt;A&gt; &lt;B&gt; : A&#xBE0C;&#xB7F0;&#xCE58;&#xB97C; B&#xBE0C;&#xB7F0;&#xCE58;&#xB85C; &#xC774;&#xB3D9;
+git reset [branch&#xBA85;] : &#xB85C;&#xCEEC;&#xC0C1;&#xC5D0;&#xC11C; &#xC5C6;&#xB358;&#xC77C;&#xB85C; &#xB418;&#xB3CC;&#xB9BC;
+git revert [branch&#xBA85;] : remote&#xC5D0; push&#xB428;
+git cherry-pick &lt;C2 C4&gt; : &#xAC1C;&#xBCC4; &#xCEE4;&#xBC0B;&#xC744; &#xACE8;&#xB77C;&#xC11C; HEAD&#xC704;&#xC5D0; &#xB5A8;&#xC5B4;&#xB728;&#xB9BC;(&#xBCF5;&#xC218;&#xAC1C; &#xCEE4;&#xBC0B; &#xBCF5;&#xC0AC;)
+(C2&#xC640; C4 &#xB0B4;&#xC6A9;&#xC744; &#xD604;&#xC7AC; &#xBE0C;&#xB7F0;&#xCE58;&#xB85C; &#xBCF5;&#xC0AC;&#xD568;)
+git rebase -i HEAD~4 : &#xD604;&#xC7AC; &#xBE0C;&#xB7F0;&#xCE58;&#xB97C; HEAD&#xC758; &#xC0C1;&#xC704; 4&#xBC88;&#xC9F8;&#xB85C; &#xBD99;&#xC5EC;&#xB123;&#xAE30; &#xD55C;&#xB2E4;.
+(&#xB2E8; -i &#xC635;&#xC158;&#xC73C;&#xB85C; &#xC778;&#xD558;&#xC5EC; &#xBC14;&#xB85C; &#xC62E;&#xACA8;&#xC9C0;&#xC9C0; &#xC54A;&#xACE0; rebase&#xD560; commit&#xC744; &#xC120;&#xD0DD;&#xD558;&#xACE0; &#xC21C;&#xC11C;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xC5EC; rebase &#xD55C;&#xB2E4;.)
+git rebase &lt;A&gt; &lt;B&gt; : A&#xBE0C;&#xB7F0;&#xCE58;&#xC5D0; B&#xBE0C;&#xB7F0;&#xCE58;&#xB97C; rebase
+git tag &lt;&#xD0DC;&#xADF8;&#xBA85;&gt; : &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xC5D0; &#xD574;&#xB2F9; &lt;&#xD0DC;&#xADF8;&#xBA85;&gt;&#xC73C;&#xB85C; &#xD0DC;&#xADF8;&#xC0DD;&#xC131;
+git tag &lt;&#xD0DC;&#xADF8;&#xBA85;&gt; &lt;&#xCEE4;&#xBC0B;&gt; : &#xD574;&#xB2F9; &lt;&#xCEE4;&#xBC0B;&gt;(&#xD574;&#xC2DC;)&#xC5D0; &lt;&#xD0DC;&#xADF8;&#xBA85;&gt;&#xC73C;&#xB85C; &#xD0DC;&#xADF8; &#xC0DD;&#xC131;
+git describe &lt;ref:&#xBE0C;&#xB79C;&#xCE58;&#xBA85;&gt;: &#xCEE4;&#xBC0B; &#xD788;&#xC2A4;&#xD1A0;&#xB9AC;&#xC5D0;&#xC11C; &#xC55E; &#xB4A4;&#xB85C; &#xC5EC;&#xB7EC; &#xCEE4;&#xBC0B;&#xC744; &#xC774;&#xB3D9;&#xD558;&#xACE0; &#xB098;&#xC11C; &#xCEE4;&#xBC0B; &#xD2B8;&#xB9AC;&#xC5D0;&#xC11C; &#xBC29;&#xD5A5;&#xAC10;&#xAC01;&#xC744; &#xB2E4;&#xC2DC; &#xCC3E;&#xB290;&#xB370; &#xB3C4;&#xC6C0;&#xC744; &#xC90C;.
+(&lt;ref&gt;&#xC5D0;&#xB294; commit&#xC744; &#xC758;&#xBBF8;&#xD558;&#xB294; &#xADF8; &#xC5B4;&#xB5A4;&#xAC83;&#xC744; &#xC4F8; &#xC218; &#xC788;&#xC74C;)
+&#xBA85;&#xB839;&#xC5B4; &#xCD9C;&#xB825;&#xACB0;&#xACFC;: &lt;tag&gt;_&lt;numCommits&gt;_g&lt;hash&gt;, &lt;tag&gt;&#xB294; &#xAC00;&#xC7A5; &#xAC00;&#xAE4C;&#xC6B4; &#xBD80;&#xBAA8; &#xD0DC;&#xADF8;, &lt;numCommits&gt;&#xB294; &#xC5BC;&#xB9C8;&#xB098; &#xBA40;&#xB9AC; &#xC788;&#xB294;&#xC9C0;, &lt;hash&gt;&#xB294; &#xBB18;&#xC0AC;&#xD558;&#xACE0; &#xC788;&#xB294; &#xCEE4;&#xBC0B;&#xC758; &#xD574;&#xC2DC;(&#xBD80;&#xBAA8;&#xC758; &#xCEE4;&#xBC0B;&#xC774; &#xC544;&#xB2D8;)
+git bisect : &#xBB38;&#xC81C;&#xAC00; &#xB418;&#xB294; &#xCEE4;&#xBC0B;&#xC744; &#xCC3E;&#xB294; &#xBA85;&#xB839;&#xC5B4;
+git fetch : &#xC6D0;&#xACA9; &#xC800;&#xC7A5;&#xC18C;&#xC758; commit&#xB4E4;&#xC744; &#xB85C;&#xCEEC;&#xB85C; &#xBC1B;&#xC544;&#xC634;(&#xD558;&#xC9C0;&#xB9CC; &#xB85C;&#xCEEC; master branch&#xC5D0; &#xBC18;&#xC601;&#xC774; &#xB418;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2D8;, merge&#xB97C; &#xBCC4;&#xB3C4;&#xB85C; &#xD574;&#xC57C;&#xD568;)
+git pull : fetch + merge
+git pull --rebase : pull + rebase
+git checkout -b &lt;A&gt; &lt;origin&gt; : &lt;A&gt;&#xB77C;&#xB294; &#xC0C8; &#xBE0C;&#xB7F0;&#xCE58; &#xC0DD;&#xC131;, origin&#xC744; &#xCD94;&#xC801;&#xD558;&#xAC8C; &#xC124;&#xC815;
+git branch -u &lt;origin&gt; : &#xD604;&#xC7AC; &#xBE0C;&#xB7F0;&#xCE58;&#xAC00; &lt;origin&gt;&#xC744; &#xCD94;&#xC801;&#xD558;&#xB3C4;&#xB85D; &#xD568;.
+git branch -u &lt;origin&gt; &lt;A&gt; : &lt;A&gt;&#xB77C;&#xB294; &#xBE0C;&#xB7F0;&#xCE58;&#xAC00; &lt;origin&gt;&#xC744; &#xCD94;&#xC801;&#xD558;&#xB3C4;&#xB85D; &#xD568;.
+git push orgin &lt;palce&gt; : master
+git push origin &lt;source&gt;:&lt;destination&gt;
+git fetch origin &lt;source&gt;:&lt;destination&gt; : &#xC6D0;&#xACA9;&#xC800;&#xC7A5;&#xC18C;&#xC758; &lt;source&gt;&#xB97C; &#xB85C;&#xCEEC;&#xC800;&#xC815;&#xC18C;&#xC758; &lt;destination&gt;&#xC73C;&#xB85C; &#xAC00;&#xC838;&#xC628;&#xB2E4;.
+git push origin :&lt;A&gt; : &#xC6D0;&#xACA9;&#xC800;&#xC7A5;&#xC18C;&#xC758; &lt;A&gt;&#xC5D0; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC5C6;&#xB294; &#xAC78; push&#xD55C;&#xB2E4;. &#xC989; &#xC6D0;&#xACA9;&#xC800;&#xC7A5;&#xC18C;&#xC5D0; &lt;A&gt;&#xBE0C;&#xB7F0;&#xCE58;&#xB97C; &#xC81C;&#xAC70;.
+git fetch origin :&lt;A&gt; : &#xC6D0;&#xACA9;&#xC800;&#xC7A5;&#xC18C;&#xC5D0;&#xC11C; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC5C6;&#xB294;&#xAC78; fetch&#xD55C;&#xB2E4;. &#xC989; &#xB85C;&#xCEEC;&#xC800;&#xC7A5;&#xC18C;&#xC5D0; &lt;A&gt;&#xBE0C;&#xB7F0;&#xCE58; &#xC0DD;&#xC131;
+</code></pre><h3 id="git-practice-site">Git Practice Site</h3>
+<ul>
+<li><a href="https://learngitbranching.js.org/" target="_blank">https://learngitbranching.js.org/</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Spring/SpringBootInitialzr.html" class="navigation navigation-prev " aria-label="Previous page: SpringBoot 구성하기">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="GitUtils.html" class="navigation navigation-next " aria-label="Next page: git 유틸리티">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Git 명령어 모음","title":"git 명령어모음","level":"4.1","depth":1,"next":{"title":"git 유틸리티","level":"4.2","depth":1,"path":"pages/GIT/GitUtils.md","ref":"pages/GIT/GitUtils.md","articles":[]},"previous":{"title":"SpringBoot 구성하기","level":"3.1","depth":1,"path":"pages/Spring/SpringBootInitialzr.md","ref":"pages/Spring/SpringBootInitialzr.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/GIT/GitCommand.md","mtime":"2019-11-10T15:08:01.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-10T15:08:50.854Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
