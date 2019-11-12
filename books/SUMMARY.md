@@ -11,6 +11,7 @@
 ### Git
 * [git 명령어모음](pages/GIT/GitCommand.md)
 * [git 유틸리티](pages/GIT/GitUtils.md)
+* [git Rebase](pages/GIT/Rebase.md)
 
 ### Development Env.
 * [Java JDK 설치](pages/DevEnv/JavaEnv.md)
