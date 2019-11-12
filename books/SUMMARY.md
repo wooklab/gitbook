@@ -5,6 +5,10 @@
 
 ### JAVA
 
+### ElasticSearch
+* [ElasticSearch Alias](pages/ElasticSearch/Alias.md)
+* [ElasticSearch Exception](pages/ElasticSearch/EsException.md)
+
 ### Spring
 * [SpringBoot 구성하기](pages/Spring/SpringBootInitialzr.md)
 
