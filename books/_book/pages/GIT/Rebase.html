@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>git 유틸리티 · GitBook</title>
+        <title>git Rebase · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Git Utility Link">
+        <meta name="description" content="rebase 하는 방법">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Rebase.html" />
+    <link rel="next" href="../DevEnv/JavaEnv.html" />
     
     
-    <link rel="prev" href="GitCommand.html" />
+    <link rel="prev" href="GitUtils.html" />
     
 
     </head>
@@ -149,7 +149,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.2" data-path="GitUtils.html">
+        <li class="chapter " data-level="4.2" data-path="GitUtils.html">
             
                 <a href="GitUtils.html">
             
@@ -162,7 +162,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="Rebase.html">
+        <li class="chapter active" data-level="4.3" data-path="Rebase.html">
             
                 <a href="Rebase.html">
             
@@ -245,7 +245,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >git 유틸리티</a>
+        <a href="../.." >git Rebase</a>
     </h1>
 </div>
 
@@ -260,14 +260,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="git-utility-link">Git Utility Link</h1>
-<h3 id="git-aware-prompt">git-aware-prompt</h3>
-<p><a href="https://github.com/jimeh/git-aware-prompt" target="_blank">git-aware-prompt(https://github.com/jimeh/git-aware-prompt)</a></p>
-<ul>
-<li>&#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xC11C; &#xD604;&#xC7AC; &#xBE0C;&#xB7F0;&#xCE58;&#xB97C; &#xC54C; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD574;&#xC8FC;&#xB294; &#xC720;&#xD2F8;</li>
-<li>&#xD604;&#xC7AC; &#xBE0C;&#xB7F0;&#xCE58; &#xBC0F; &#xC218;&#xC815; &#xC0AC;&#xD56D;&#xC774; &#xC788;&#xB294;&#xC9C0; &#xC5EC;&#xBD80;&#xB3C4; &#xC54C;&#xB824;&#xC900;&#xB2E4;.</li>
-<li>&#xC791;&#xC5C5;&#xC2DC; &#xBE0C;&#xB7F0;&#xCE58;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC9C0; &#xC54A;&#xC544; &#xC5C9;&#xB6B1;&#xD55C; &#xACF3;&#xC5D0; &#xCEE4;&#xBC0B;&#xD558;&#xB294; &#xC77C;&#xC774; &#xC5C6;&#xB3C4;&#xB85D; &#xC608;&#xBC29;&#xD558;&#xB294;&#xB370; &#xB3C4;&#xC6C0;&#xC774; &#xB41C;&#xB2E4;.</li>
-</ul>
+                                <h3 id="rebase-&#xD558;&#xB294;-&#xBC29;&#xBC95;">Rebase &#xD558;&#xB294; &#xBC29;&#xBC95;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># rebase &#xD558;&#xB294; &#xBC95;</span>
+git checkout <span class="hljs-variable">${rebase_dest_branch}</span>
+git pull origin <span class="hljs-variable">${rebase_dest_branch}</span>
+git checkout <span class="hljs-variable">${rebase_src_branch}</span>
+git rebase -i <span class="hljs-variable">${rebase_dest_branch}</span>
+
+<span class="hljs-comment"># &#xCDA9;&#xB3CC; &#xBC1C;&#xC0DD;&#xC2DC; &#xCDA9;&#xB3CC; &#xD574;&#xACB0; &#xD6C4; &#xACC4;&#xC18D; &#xC9C4;&#xD589;&#xD558;&#xAE30;.</span>
+git rebase --continue
+
+<span class="hljs-comment"># local &#xC0C1;&#xC5D0;&#xC11C; rebase&#xAC00; &#xC815;&#xC0C1; &#xC644;&#xB8CC;&#xAC00; &#xAC15;&#xC81C; &#xD478;&#xC2DC;</span>
+git push --force-with-lease
+
+<span class="hljs-comment"># &#xC624;&#xB958; &#xBC1C;&#xC0DD;&#xC2DC;</span>
+git rebase --abort
+</code></pre>
 
                                 
                                 </section>
@@ -295,12 +303,12 @@
 
             
                 
-                <a href="GitCommand.html" class="navigation navigation-prev " aria-label="Previous page: git 명령어모음">
+                <a href="GitUtils.html" class="navigation navigation-prev " aria-label="Previous page: git 유틸리티">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Rebase.html" class="navigation navigation-next " aria-label="Next page: git Rebase">
+                <a href="../DevEnv/JavaEnv.html" class="navigation navigation-next " aria-label="Next page: Java JDK 설치">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -311,7 +319,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Git Utility Link","title":"git 유틸리티","level":"4.2","depth":1,"next":{"title":"git Rebase","level":"4.3","depth":1,"path":"pages/GIT/Rebase.md","ref":"pages/GIT/Rebase.md","articles":[]},"previous":{"title":"git 명령어모음","level":"4.1","depth":1,"path":"pages/GIT/GitCommand.md","ref":"pages/GIT/GitCommand.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/GIT/GitUtils.md","mtime":"2019-11-10T15:08:01.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-12T14:52:23.898Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"rebase 하는 방법","title":"git Rebase","level":"4.3","depth":1,"next":{"title":"Java JDK 설치","level":"5.1","depth":1,"path":"pages/DevEnv/JavaEnv.md","ref":"pages/DevEnv/JavaEnv.md","articles":[]},"previous":{"title":"git 유틸리티","level":"4.2","depth":1,"path":"pages/GIT/GitUtils.md","ref":"pages/GIT/GitUtils.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/GIT/Rebase.md","mtime":"2019-11-12T14:54:28.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-12T14:52:23.898Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
