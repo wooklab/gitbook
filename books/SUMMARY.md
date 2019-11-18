@@ -6,19 +6,19 @@
 ### JAVA
 
 ### ElasticSearch
-* [ElasticSearch Alias](pages/ElasticSearch/Alias.md)
-* [ElasticSearch Exception](pages/ElasticSearch/EsException.md)
+* [ElasticSearch Alias](pages/ElasticSearch/alias.md)
+* [ElasticSearch Exception](pages/ElasticSearch/es-exception.md)
 
 ### Spring
-* [SpringBoot 구성하기](pages/Spring/SpringBootInitialzr.md)
+* [SpringBoot 구성하기](pages/Spring/spring-boot-initialzr.md)
 
 ### Git
-* [git 명령어모음](pages/GIT/GitCommand.md)
-* [git 유틸리티](pages/GIT/GitUtils.md)
-* [git Rebase](pages/GIT/Rebase.md)
+* [git 명령어모음](pages/Git/git-command.md)
+* [git 유틸리티](pages/Git/git-utils.md)
+* [git Rebase](pages/Git/rebase.md)
 
 ### Development Env.
-* [Java JDK 설치](pages/DevEnv/JavaEnv.md)
+* [Java JDK 설치](pages/DevEnv/java-env.md)
 
 ### Book
-* [책 추천](pages/Book/RecommendBook.md)
+* [책 추천](pages/Book/recommend-book.md)
