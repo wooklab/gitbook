@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ElasticSearch Alias · GitBook</title>
+        <title>SpringBoot 구성하기 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="ElasticSearch Alias 변경하기">
+        <meta name="description" content="Spring Initalzr">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es-exception.html" />
+    <link rel="next" href="../Git/git-command.html" />
     
     
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="../ElasticSearch/es-exception.html" />
     
 
     </head>
@@ -116,9 +116,9 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="alias.html">
+        <li class="chapter " data-level="3.1" data-path="../ElasticSearch/alias.html">
             
-                <a href="alias.html">
+                <a href="../ElasticSearch/alias.html">
             
                     
                     ElasticSearch Alias
@@ -129,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="es-exception.html">
+        <li class="chapter " data-level="3.2" data-path="../ElasticSearch/es-exception.html">
             
-                <a href="es-exception.html">
+                <a href="../ElasticSearch/es-exception.html">
             
                     
                     ElasticSearch Exception
@@ -149,9 +149,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../Spring/spring-boot-initialzr.html">
+        <li class="chapter active" data-level="4.1" data-path="spring-boot-initialzr.html">
             
-                <a href="../Spring/spring-boot-initialzr.html">
+                <a href="spring-boot-initialzr.html">
             
                     
                     SpringBoot 구성하기
@@ -278,7 +278,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >ElasticSearch Alias</a>
+        <a href="../.." >SpringBoot 구성하기</a>
     </h1>
 </div>
 
@@ -293,29 +293,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="elasticsearch-alias">ElasticSearch Alias</h1>
-<h3 id="alias-&#xBCC0;&#xACBD;&#xD558;&#xAE30;">Alias &#xBCC0;&#xACBD;&#xD558;&#xAE30;</h3>
-<h4 id="uri">URI</h4>
-<pre><code class="lang-http">/_aliases
-</code></pre>
-<h4 id="json-query">Json Query</h4>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;actions&quot;</span>: [
-    {
-      <span class="hljs-string">&quot;remove&quot;</span>: {
-        <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;wmp2.0_search_set2&quot;</span>,
-        <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;dlv&quot;</span>
-      }
-    },
-    {
-      <span class="hljs-string">&quot;add&quot;</span>: {
-        <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;wmp2.0_search_set1&quot;</span>,
-        <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;dlv&quot;</span>
-      }
-    }
-  ]
-}
-</code></pre>
+                                <h1 id="springboot-initialzr">SpringBoot Initialzr</h1>
+<h3 id="&#xC2A4;&#xD504;&#xB9C1;&#xBD80;&#xD2B8;-&#xCD08;&#xAE30;-&#xAD6C;&#xC131;-&#xC0AC;&#xC774;&#xD2B8;">&#xC2A4;&#xD504;&#xB9C1;&#xBD80;&#xD2B8; &#xCD08;&#xAE30; &#xAD6C;&#xC131; &#xC0AC;&#xC774;&#xD2B8;</h3>
+<p>&#xCD5C;&#xCD08; &#xC2A4;&#xD504;&#xB9C1;&#xBD80;&#xD2B8; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xAD6C;&#xC131;&#xC2DC; &#xBE60;&#xB974;&#xACE0; &#xC27D;&#xAC8C; &#xAD6C;&#xC131;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xB3C4;&#xC6C0;&#xC744; &#xC8FC;&#xB294; &#xC0AC;&#xC774;&#xD2B8;: <a href="https://start.spring.io/" target="_blank">start.spring.io</a></p>
 
                                 
                                 </section>
@@ -343,12 +323,12 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="../ElasticSearch/es-exception.html" class="navigation navigation-prev " aria-label="Previous page: ElasticSearch Exception">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="es-exception.html" class="navigation navigation-next " aria-label="Next page: ElasticSearch Exception">
+                <a href="../Git/git-command.html" class="navigation navigation-next " aria-label="Next page: git 명령어모음">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -359,7 +339,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"ElasticSearch Alias 변경하기","title":"ElasticSearch Alias","level":"3.1","depth":1,"next":{"title":"ElasticSearch Exception","level":"3.2","depth":1,"path":"pages/ElasticSearch/es-exception.md","ref":"pages/ElasticSearch/es-exception.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/ElasticSearch/alias.md","mtime":"2019-11-12T15:26:56.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T14:05:03.400Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Spring Initalzr","title":"SpringBoot 구성하기","level":"4.1","depth":1,"next":{"title":"git 명령어모음","level":"5.1","depth":1,"path":"pages/Git/git-command.md","ref":"pages/Git/git-command.md","articles":[]},"previous":{"title":"ElasticSearch Exception","level":"3.2","depth":1,"path":"pages/ElasticSearch/es-exception.md","ref":"pages/ElasticSearch/es-exception.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Spring/spring-boot-initialzr.md","mtime":"2019-11-10T15:08:01.038Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T14:05:03.400Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
