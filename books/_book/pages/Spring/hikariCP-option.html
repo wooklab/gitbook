@@ -1,0 +1,451 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JPA hikariCP · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="hikariCP Options Settings">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Git/git-command.html" />
+    
+    
+    <link rel="prev" href="spring-boot-initialzr.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JAVA</li>
+        
+        
+    
+
+    
+        
+        <li class="header">ElasticSearch</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ElasticSearch/alias.html">
+            
+                <a href="../ElasticSearch/alias.html">
+            
+                    
+                    ElasticSearch Alias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../ElasticSearch/es-exception.html">
+            
+                <a href="../ElasticSearch/es-exception.html">
+            
+                    
+                    ElasticSearch Exception
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Spring</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="spring-boot-initialzr.html">
+            
+                <a href="spring-boot-initialzr.html">
+            
+                    
+                    SpringBoot 구성하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="hikariCP-option.html">
+            
+                <a href="hikariCP-option.html">
+            
+                    
+                    JPA hikariCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../Git/git-command.html">
+            
+                <a href="../Git/git-command.html">
+            
+                    
+                    git 명령어모음
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../Git/git-utils.html">
+            
+                <a href="../Git/git-utils.html">
+            
+                    
+                    git 유틸리티
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../Git/rebase.html">
+            
+                <a href="../Git/rebase.html">
+            
+                    
+                    git Rebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Development Env.</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../DevEnv/java-env.html">
+            
+                <a href="../DevEnv/java-env.html">
+            
+                    
+                    Java JDK 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Book</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Book/recommend-book.html">
+            
+                <a href="../Book/recommend-book.html">
+            
+                    
+                    책 추천
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JPA hikariCP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jpa-hikaricp-options">JPA hikariCP Options</h1>
+<h3 id="connectiontimeout">connectionTimeout</h3>
+<blockquote>
+<p>&#xD480;&#xC5D0;&#xC11C; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xAD6C;&#xD560; &#xB54C;&#xB300;&#xAE30; &#xC2DC;&#xAC04;&#xC744; &#xBC00;&#xB9AC;&#xCD08; &#xB2E8;&#xC704;&#xB85C; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;. &#xB300;&#xAE30; &#xC2DC;&#xAC04; &#xC548;&#xC5D0; &#xAD6C;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xBA74; &#xC775;&#xC149;&#xC158;&#xC774; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;.
+&#xD5C8;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xCD5C;&#xC18C; &#xAC12;&#xC740; 250&#xC774;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 30000 (30&#xCD08;)</li>
+</ul>
+</blockquote>
+<h3 id="validationtimeout">validationTimeout</h3>
+<blockquote>
+<p>&#xCEE4;&#xB125;&#xC158;&#xC774; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xAC80;&#xC0AC;&#xD560; &#xB54C; &#xB300;&#xAE30; &#xC2DC;&#xAC04;&#xC744; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;. &#xC774; &#xAC12;&#xC740; connectionTimeout&#xBCF4;&#xB2E4; &#xC791;&#xC544;&#xC57C; &#xD55C;&#xB2E4;.
+&#xD5C8;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xCD5C;&#xC18C; &#xAC12;&#xC740; 250&#xC774;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 5000 (5&#xCD08;)</li>
+</ul>
+</blockquote>
+<h3 id="idletimeout">idleTimeout</h3>
+<blockquote>
+<p>&#xCEE4;&#xB125;&#xC158;&#xC774; &#xD480;&#xC5D0;&#xC11C; &#xC720;&#xD734; &#xC0C1;&#xD0DC;&#xB85C; &#xB0A8;&#xC744; &#xC218; &#xC788;&#xB294; &#xCD5C;&#xB300; &#xC2DC;&#xAC04;&#xC744; &#xBC00;&#xB9AC;&#xCD08; &#xB2E8;&#xC704;&#xB85C; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;. &#xC774; &#xAC12;&#xC740; minimumIdle&#xC774; maximumPoolSize&#xBCF4;&#xB2E4; &#xC791;&#xC744; &#xB54C;&#xB9CC; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<blockquote>
+<p>&#xD0C0;&#xC784;&#xC544;&#xC6C3;&#xC774; &#xC9C0;&#xB09C; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xAE30;&#xAE4C;&#xC9C0; &#xCD5C;&#xB300; 30&#xCD08;, &#xD3C9;&#xADE0; 15&#xCD08; &#xCC28;&#xC774; &#xB0A0; &#xC218; &#xC788;&#xB2E4;.
+&#xC774; &#xD0C0;&#xC784;&#xC544;&#xC6C3; &#xC804;&#xC5D0;&#xB294; &#xC720;&#xD734; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xD480;&#xC758; &#xCEE4;&#xB125;&#xC158; &#xAC1C;&#xC218;&#xAC00; minimumIdle&#xC774; &#xB418;&#xBA74; &#xC720;&#xD734; &#xC5EC;&#xBD80;&#xC5D0; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xD480;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.
+&#xC774; &#xAC12;&#xC774; 0&#xC774;&#xBA74; &#xC720;&#xD734; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xD480;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.
+&#xD5C8;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xCD5C;&#xC18C; &#xAC12;&#xC740; 10000(10&#xCD08;)&#xC774;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 600000 (10&#xBD84;) = 1000(1&#xCD08;), 60000(1&#xBD84;)</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="maxlifetime">maxLifetime</h3>
+<blockquote>
+<p>&#xCEE4;&#xB125;&#xC158;&#xC758; &#xCD5C;&#xB300; &#xC720;&#xC9C0; &#xC2DC;&#xAC04;&#xC744; &#xBC00;&#xB9AC;&#xCD08; &#xB2E8;&#xC704;&#xB85C; &#xC124;&#xC815;&#xD55C;&#xB2E4;. &#xC774; &#xC2DC;&#xAC04;&#xC774; &#xC9C0;&#xB09C; &#xCEE4;&#xB125;&#xC158; &#xC911;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC911;&#xC778; &#xCEE4;&#xB125;&#xC158;&#xC740; &#xC885;&#xB8CC;&#xB41C; &#xC774;&#xD6C4;&#xC5D0; &#xD480;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD55C;&#xB2E4;.
+&#xAC11;&#xC790;&#xAE30; &#xD480;&#xC5D0;&#xC11C; &#xB9CE;&#xC740; &#xCEE4;&#xB125;&#xC158;&#xC774; &#xC81C;&#xAC70;&#xB418;&#xB294; &#xAC83;&#xC744; &#xD53C;&#xD558;&#xAE30; &#xC704;&#xD574; negative attenuation(&#xAC10;&#xC1E0;)&#xB97C; &#xC801;&#xC6A9;&#xD574; &#xC810;&#xC9C4;&#xC801;&#xC73C;&#xB85C; &#xC81C;&#xAC70;&#xD55C;&#xB2E4;.
+&#xC774; &#xAC12;&#xC744; &#xC124;&#xC815;&#xD560; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD55C;&#xB2E4;. DB&#xB098; &#xC778;&#xD504;&#xB77C;&#xC2A4;&#xD2B8;&#xB7ED;&#xCC98;&#xC5D0;&#xC11C; &#xC81C;&#xD55C;&#xD55C; &#xCEE4;&#xB125;&#xC158; &#xC81C;&#xD55C; &#xC2DC;&#xAC04; &#xBCF4;&#xB2E4; &#xCD5C;&#xC18C;&#xD55C; 30&#xCD08;&#xB294; &#xC9E7;&#xC544;&#xC57C; &#xD55C;&#xB2E4;..
+&#xC774; &#xAC12;&#xC774; 0&#xC774;&#xBA74; &#xD480;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC; idleTimeout&#xC740; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 1800000 (30&#xBD84;)</li>
+</ul>
+</blockquote>
+<h3 id="maximumpoolsize">maximumPoolSize</h3>
+<blockquote>
+<p>&#xC720;&#xD734; &#xC0C1;&#xD0DC;&#xC640; &#xC0AC;&#xC6A9;&#xC911;&#xC778; &#xCEE4;&#xB125;&#xC158;&#xC744; &#xD3EC;&#xD568;&#xD574;&#xC11C; &#xD480;&#xC774; &#xD5C8;&#xC6A9;&#xD558;&#xB294; &#xCD5C;&#xB300; &#xCEE4;&#xB125;&#xC158; &#xAC1C;&#xC218;&#xB97C; &#xC124;&#xC815;&#xD55C;&#xB2E4;. &#xC774; &#xAC12;&#xC740; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xB300;&#xD55C; &#xC2E4;&#xC81C; &#xCEE4;&#xB125;&#xC158;&#xC758; &#xCD5C;&#xB300; &#xAC1C;&#xC218;&#xB97C; &#xACB0;&#xC815;&#xD55C;&#xB2E4;.
+&#xD480;&#xC774; &#xC774; &#xD06C;&#xAE30;&#xC5D0; &#xB3C4;&#xB2EC;&#xD558;&#xACE0; &#xC720;&#xD734; &#xCEE4;&#xB125;&#xC158;&#xC774; &#xC5C6;&#xC744; &#xB54C; connectionTimeout&#xC774; &#xC9C0;&#xB0A0; &#xB54C;&#xAE4C;&#xC9C0; getConnection() &#xD638;&#xCD9C;&#xC740; &#xBE14;&#xB85D;&#xD0B9;&#xB41C;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 10</li>
+</ul>
+</blockquote>
+<h3 id="connectiontestquery">connectionTestQuery</h3>
+<blockquote>
+<p>&#xCEE4;&#xB125;&#xC158;&#xC774; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xAC80;&#xC0AC;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD560; &#xCFFC;&#xB9AC;&#xB97C; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;. &#xB4DC;&#xB77C;&#xC774;&#xBC84;&#xAC00; JDBC4&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xBA74; &#xC774; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xC124;&#xC815;&#xD558;&#xC9C0; &#xB9D0;&#xC790;. &#xC774; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xC124;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; JDBC4&#xC758; Conneciton.isValid()&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xAC80;&#xC0AC;&#xB97C; &#xC218;&#xD589;&#xD55C;&#xB2E4;.</p>
+</blockquote>
+<h3 id="leakdetectionthreshold">leakDetectionThreshold</h3>
+<blockquote>
+<p>&#xCEE4;&#xB125;&#xC158;&#xC774; &#xB204;&#xC218; &#xAC00;&#xB2A5;&#xC131;&#xC774; &#xC788;&#xB2E4;&#xB294; &#xB85C;&#xADF8; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xAE30; &#xC804;&#xC5D0; &#xCEE4;&#xB125;&#xC158;&#xC774; &#xD480;&#xC5D0;&#xC11C; &#xBC97;&#xC5B4;&#xB0A0; &#xC218; &#xC788;&#xB294; &#xC2DC;&#xAC04;&#xC744; &#xBC00;&#xB9AC;&#xCD08;&#xB85C; &#xC124;&#xC815;&#xD55C;&#xB2E4;. 0&#xC740; &#xB204;&#xC218; &#xBC1C;&#xACAC;&#xC744; &#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xD5C8;&#xC6A9;&#xD558;&#xB294; &#xCD5C;&#xC18C; &#xAC12;&#xC740; 2000(2&#xCD08;)&#xC774;&#xB2E4;.</p>
+<ul>
+<li>&#xAE30;&#xBCF8; &#xAC12;: 0</li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spring-boot-initialzr.html" class="navigation navigation-prev " aria-label="Previous page: SpringBoot 구성하기">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Git/git-command.html" class="navigation navigation-next " aria-label="Next page: git 명령어모음">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"hikariCP Options Settings","title":"JPA hikariCP","level":"4.2","depth":1,"next":{"title":"git 명령어모음","level":"5.1","depth":1,"path":"pages/Git/git-command.md","ref":"pages/Git/git-command.md","articles":[]},"previous":{"title":"SpringBoot 구성하기","level":"4.1","depth":1,"path":"pages/Spring/spring-boot-initialzr.md","ref":"pages/Spring/spring-boot-initialzr.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/Spring/hikariCP-option.md","mtime":"2019-11-20T14:07:51.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-20T14:07:56.834Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

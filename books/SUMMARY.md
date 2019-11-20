@@ -11,6 +11,7 @@
 
 ### Spring
 * [SpringBoot 구성하기](pages/Spring/spring-boot-initialzr.md)
+* [JPA hikariCP](pages/Spring/hikariCP-option.md)
 
 ### Git
 * [git 명령어모음](pages/Git/git-command.md)
