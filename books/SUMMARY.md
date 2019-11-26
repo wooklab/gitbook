@@ -8,6 +8,7 @@
 ### ElasticSearch
 * [ElasticSearch Alias](pages/ElasticSearch/alias.md)
 * [ElasticSearch Exception](pages/ElasticSearch/es-exception.md)
+* [ElasticSearch System Setting](pages/ElasticSearch/setup-elasticsearch.md)
 
 ### Spring
 * [SpringBoot 구성하기](pages/Spring/spring-boot-initialzr.md)

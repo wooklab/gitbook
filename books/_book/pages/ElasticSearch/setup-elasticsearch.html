@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ElasticSearch Alias · GitBook</title>
+        <title>ElasticSearch System Setting · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="ElasticSearch Alias 변경하기">
+        <meta name="description" content="Elasticsearch install and configuration">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es-exception.html" />
+    <link rel="next" href="../Spring/spring-boot-initialzr.html" />
     
     
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="es-exception.html" />
     
 
     </head>
@@ -116,7 +116,7 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="alias.html">
+        <li class="chapter " data-level="3.1" data-path="alias.html">
             
                 <a href="alias.html">
             
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="setup-elasticsearch.html">
+        <li class="chapter active" data-level="3.3" data-path="setup-elasticsearch.html">
             
                 <a href="setup-elasticsearch.html">
             
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >ElasticSearch Alias</a>
+        <a href="../.." >ElasticSearch System Setting</a>
     </h1>
 </div>
 
@@ -319,29 +319,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="elasticsearch-alias">ElasticSearch Alias</h1>
-<h3 id="alias-&#xBCC0;&#xACBD;&#xD558;&#xAE30;">Alias &#xBCC0;&#xACBD;&#xD558;&#xAE30;</h3>
-<h4 id="uri">URI</h4>
-<pre><code class="lang-http">/_aliases
+                                <h3 id="&#xC2DC;&#xC2A4;&#xD15C;-&#xC124;&#xC815;">&#xC2DC;&#xC2A4;&#xD15C; &#xC124;&#xC815;</h3>
+<ol>
+<li><p>max open files &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># vi /etc/security/limits.conf</span>
+ai - nofile 65536 <span class="hljs-comment"># ai&#xB294; &#xC2E4;&#xD589; &#xC720;&#xC800; &#xC544;&#xC774;&#xB514;</span>
 </code></pre>
-<h4 id="json-query">Json Query</h4>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;actions&quot;</span>: [
-    {
-      <span class="hljs-string">&quot;remove&quot;</span>: {
-        <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;wmp2.0_search_set2&quot;</span>,
-        <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;dlv&quot;</span>
-      }
-    },
-    {
-      <span class="hljs-string">&quot;add&quot;</span>: {
-        <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;wmp2.0_search_set1&quot;</span>,
-        <span class="hljs-string">&quot;alias&quot;</span>: <span class="hljs-string">&quot;dlv&quot;</span>
-      }
-    }
-  ]
-}
+</li>
+<li><p>num of thread &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#vi /etc/security/limits.conf</span>
+ai - nproc 4096 <span class="hljs-comment">#es &#xAD8C;&#xC7A5; 4096&#xC774;&#xC0C1;</span>
 </code></pre>
+</li>
+<li><p>max filesize &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#vi /etc/security/limits.conf</span>
+ai - fsize unlimited
+</code></pre>
+</li>
+<li><p>address space &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#vi /etc/security/limits.conf</span>
+ai - as unlimited
+</code></pre>
+</li>
+<li><p>max locked in memory &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#vi /etc/security/limits.conf</span>
+ai - memlock unlimited
+</code></pre>
+</li>
+<li><p>vm &#xC124;&#xC815;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#vi /etc/sysctl.conf</span>
+vm.max_map_count=262144 <span class="hljs-comment">#&#xC124;&#xC815; &#xD655;&#xC778;</span>
+<span class="hljs-comment"># $sysctl vm.max_map_count</span>
+<span class="hljs-comment"># &#xBC14;&#xB85C; &#xC801;&#xC6A9;&#xC774;&#xC548;&#xB418;&#xBA74;</span>
+sudo sysctl -w vm.max_map_count=262144
+sudo sysctl -w vm.swappiness=1
+</code></pre>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -369,12 +383,12 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="es-exception.html" class="navigation navigation-prev " aria-label="Previous page: ElasticSearch Exception">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="es-exception.html" class="navigation navigation-next " aria-label="Next page: ElasticSearch Exception">
+                <a href="../Spring/spring-boot-initialzr.html" class="navigation navigation-next " aria-label="Next page: SpringBoot 구성하기">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -385,7 +399,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"ElasticSearch Alias 변경하기","title":"ElasticSearch Alias","level":"3.1","depth":1,"next":{"title":"ElasticSearch Exception","level":"3.2","depth":1,"path":"pages/ElasticSearch/es-exception.md","ref":"pages/ElasticSearch/es-exception.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/ElasticSearch/alias.md","mtime":"2019-11-12T15:26:56.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T14:36:13.150Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"Elasticsearch install and configuration","title":"ElasticSearch System Setting","level":"3.3","depth":1,"next":{"title":"SpringBoot 구성하기","level":"4.1","depth":1,"path":"pages/Spring/spring-boot-initialzr.md","ref":"pages/Spring/spring-boot-initialzr.md","articles":[]},"previous":{"title":"ElasticSearch Exception","level":"3.2","depth":1,"path":"pages/ElasticSearch/es-exception.md","ref":"pages/ElasticSearch/es-exception.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/ElasticSearch/setup-elasticsearch.md","mtime":"2019-11-26T14:39:54.714Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T14:36:13.150Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
